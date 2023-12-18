@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+    <title>dN/dS Ratio Analysis Tool - mnguye87</title>
+</head>
+<body>
+  <h1>dN/dS Ratio Analysis Tool</h1>
+  <p>This tool is designed to analyze the ratio of nonsynonymous (dN) to synonymous (dS) mutations in protein-coding genes for pairwise analyis. The user will upload their own pairwise sequence alignment file of their genomes of choice.</p>
+  <p class="p2">
+    (1) Choose a gene <br>
+    (2) Download DNA/nucleotide sequence for two different species from NCBI GeneBank in FASTA format<br>
+    (3) Perform global/local pairwise sequence alignment (PSA)<br>
+    (4) Upload your aligned file in Pearson/FASTA format<br><br>
+    <i>
+      *<a href="https://www.ebi.ac.uk/Tools/psa/">Recommended PSA tools</a> - pick appropriate PSA tool depending on sequence size 
+      </i> <br>
+  </p>
+
+  <form name='dnds_tool' method='post' action='dnds_tool.cgi' enctype='multipart/form-data'>
+    <label for='gene_choice'><b>Gene:</b></label>
+    <input id='gene_choice' type='text' name='gene_choice' placeholder='Enter gene name (e.g. BRCA1)' required>
+    <br>
+    <label for='file1'><b>PSA:</b></label>
+    <input type='file' class="file" id='file1' name='file1' accept=".fasta, .fa" required>
+    <br><br>
+    <input type='submit' value='SUBMIT'>
+  </form>
+</body>
+</html>
