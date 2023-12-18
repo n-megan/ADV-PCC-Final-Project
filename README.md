@@ -23,7 +23,7 @@ https://www.ebi.ac.uk/Tools/psa/
 
 * DETAILED USAGE *
 
-(1) Choose a gene <br>
+(1) Choose a gene
 (2) Download DNA/nucleotide sequence for two different species from NCBI GeneBank in FASTA format
 (3) Perform global/local pairwise sequence alignment (PSA)
 (4) Upload your aligned file in Pearson/FASTA format
