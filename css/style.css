@@ -1,0 +1,175 @@
+/* CSS styling for the dNdS tool interface input/output */
+
+body {
+  background: url(../img/genemutation.png) no-repeat bottom right fixed;
+  background-size: 350px 350px;
+  background-color: whitesmoke;
+  text-align: center;
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 1000px;
+  padding: 20px 20px 20px;
+}
+
+h1 {
+  color: #f1634f;
+  /* padding-bottom: 5px; */
+  text-align: center;
+}
+
+h2 {
+  color: grey;
+  padding-bottom: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+h3 {
+  margin: auto;
+  max-width: 800px;
+  font-size: 14px;
+  padding: 10px 10px 0px;
+}
+
+p {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: auto;
+  max-width: 800px;
+  padding: 0px 10px 20px;
+}
+
+.p2 {
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 13.5px;
+  color: #565656;
+  margin: auto;
+  padding: 10px 5px 2px;
+  padding-left: 190px;
+  border-top: 1px solid black;
+}
+
+.p3 {
+  margin-top: 40px;
+  padding: 5px 5px 5px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.key {
+  border-style: solid;
+  border-bottom-color:#dc8464;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: auto;
+  max-width: 800px;
+  padding: 10px 10px 10px;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 5px;
+  border-style: solid;
+  border-bottom-color:#dc8464;
+}
+
+input#gene_choice {
+  width: 35%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+input#file1 {
+  width: 35%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #a5e797;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 82.5%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.subs {
+  width: 50%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 10px;
+}
+
+.ratio {
+  width: 50%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+th {
+  background: #3e3e3e;
+  color: #fff;
+}
+
+td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+/* CSS styling for pagination (this will be saved for future updates, please disregard) */
+
+/* table.paginated {
+  width: 52em;
+  margin: 2em auto;
+} */
+
+/* table.paginated thead {
+  background: #000;
+  color: #fff;
+} */
+
+/* table.paginated td {
+  width: 10em;
+  padding: 0.3em;
+}
+
+table.paginated tbody {
+  background: #fff;
+}
+
+div.pager {
+  text-align: center;
+  margin: 1em 0;
+}
+
+div.pager span {
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8;
+  text-align: center;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  margin-right: 0.3em;
+}
+
+div.pager span.active {
+  background: #a2e394;
+} */

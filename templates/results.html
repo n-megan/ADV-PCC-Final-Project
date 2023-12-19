@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+		<meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/table_pagination.js"></script>
+    <script src="http://code.jquery.com/ui/1.13.0/jquery-ui.min.js" ></script> -->
+    <title>Results</title>
+</head>    
+		
+<body>
+    <h1>Results</h1>
+    <h2>Gene: {{ data.gene_id }} </h2>
+    <p class="key">
+      <b>dN/dS Key</b> <br><br>
+      <b>dN/dS < 1:</b> Negative (purifying) selection, where synonymous mutations are favored over nonsynonymous mutations <br>
+      <b>dN/dS = 1:</b> Neutral selection, where synonymous and nonsynonymous mutations occur at the same rate <br>
+      <b>dN/dS > 1:</b> Positive (adaptive) selection, where nonsynonymous mutations are favored
+    </p>
+    <table class="paginated">
+      <thead>
+        <th scope="col">Sites</th>
+        <th scope="col">Seq1</th>
+        <th scope="col">Seq2</th>
+        <th scope="col">Seq1 and Seq2</th>
+      </thead>
+      <tr>
+        <td>Synonymous Sites</td>
+        <td> {{ data.syn_sites_seq1 }}</td>
+        <td> {{ data.syn_sites_seq2 }}</td>
+        <td> {{ data.syn_sites_total }}</td>
+      </tr>    
+      <tr>
+        <td>Nonsynonymous Sites</td>
+        <td> {{ data.nonsyn_sites_seq1 }}</td>
+        <td> {{ data.nonsyn_sites_seq2 }}</td>
+        <td> {{ data.nonsyn_sites_total }}</td> 
+      </tr>
+  </table>
+  <p class="p3">Synonymous and nonsynonymous substitutions are totaled between the two sequences.</p>
+  <table class="subs">
+    <tr>
+      <th>Synonymous Substitutions</th>
+      <th>Nonsynonymous Substitutions</th>
+    </tr>
+    {% for entry in entries %}
+    <tr>
+      <td> {{ entry.syn_subs_total }}</td>
+      <td> {{ entry.nonsyn_subs_total }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <table class="ratio">
+    <tr>
+      <th colspan="1" style="width:23%;">pN</th>
+      <th colspan="1" style="width:23%;">pS</th>
+      <th colspan="3" style="width:53.5%;">dNdS Ratio</th>
+    </tr>
+    {% for entry in entries %}
+    <tr>
+      <td>{{ entry.pn }}</td>
+      <td>{{ entry.ps }}</td>
+      <td>{{ entry.dnds_ratio }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
